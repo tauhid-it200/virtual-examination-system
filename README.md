@@ -1,1 +1,1 @@
-# virtual-examination-system developed by Md. Tauhidul Islam
+# virtual-examination-system developed by Md. Tauhidul Islam using PHP Laravel framework
