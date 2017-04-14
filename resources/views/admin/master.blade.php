@@ -12,42 +12,42 @@
         <title>Virtual Examination System</title>
 
         <!-- Bootstrap Core CSS -->
-        <link type="text/css" href="{{asset("public/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
         <!--DatePicker-->
-        <link type="text/css" href="{{asset("public/admin/datepicker/css/bootstrap-datepicker.min.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/datepicker/css/bootstrap-datepicker.min.css")}}" rel="stylesheet">
         <!--DateTimePicker-->
-        <link type="text/css" href="{{asset("public/admin/datetimepicker/css/bootstrap-datetimepicker.min.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/datetimepicker/css/bootstrap-datetimepicker.min.css")}}" rel="stylesheet">
         <!-- MetisMenu CSS -->
-        <link type="text/css" href="{{asset("public/admin/vendor/metisMenu/metisMenu.min.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/vendor/metisMenu/metisMenu.min.css")}}" rel="stylesheet">
         <!-- DataTables CSS -->
-        <link type="text/css" href="{{asset("public/admin/vendor/datatables-plugins/dataTables.bootstrap.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/vendor/datatables-plugins/dataTables.bootstrap.css")}}" rel="stylesheet">
         <!-- DataTables Responsive CSS -->
-        <link type="text/css" href="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet">
         <!-- Custom CSS -->
-        <link type="text/css" href="{{asset("public/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
         <!-- Custom Fonts -->
-        <link type="text/css" href="{{asset("public/admin/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("/admin/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet">
 
         <!--JQuery-->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/jquery/jquery.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/vendor/jquery/jquery.min.js")}}"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
         <!--Moment JS-->
-        <script type="text/javascript" src="{{asset("public/admin/daterangepicker/js/moment.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/daterangepicker/js/moment.min.js")}}"></script>
         <!--DatePicker JavaScript-->
-        <script type="text/javascript" src="{{asset("public/admin/datepicker/js/bootstrap-datepicker.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/datepicker/js/bootstrap-datepicker.js")}}"></script>
         <!--DateTimePicker JavaScript-->
-        <script type="text/javascript" src="{{asset("public/admin/datetimepicker/js/bootstrap-datetimepicker.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/datetimepicker/js/bootstrap-datetimepicker.min.js")}}"></script>
         <!-- Metis Menu Plugin JavaScript -->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/metisMenu/metisMenu.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/vendor/metisMenu/metisMenu.min.js")}}"></script>
         <!--DataTables JavaScript-->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/datatables/js/jquery.dataTables.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/vendor/datatables/js/jquery.dataTables.min.js")}}"></script>
         <!--DataTables-Plugins JavaScript-->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js")}}"></script>
         <!--DataTables-Responsive JavaScript-->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
         <!-- Custom Theme JavaScript -->
-        <script type="text/javascript" src="{{asset("public/admin/dist/js/sb-admin-2.js")}}"></script>
+        <script type="text/javascript" src="{{asset("/admin/dist/js/sb-admin-2.js")}}"></script>
 
         <script>
             function confirmDelete(){
