@@ -11,7 +11,7 @@
         <title>Virtual Examination System</title>
 
         <!-- Styles -->
-        <link href="{{asset("/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+        <link href="{{asset("admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
 
         <!-- Scripts -->
         <script>
