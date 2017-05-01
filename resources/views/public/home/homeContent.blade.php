@@ -1,10 +1,13 @@
 @extends("public.master")
 @section("content")
 
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Welcome to Virtual Examination System</h1>
-        <a href="{{secure_url("/login")}}" class="button button-info">Login As Admin</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>This Page Is Under Development</h1>
+            <br>
+            <a href="{{url("/login")}}" class="btn btn-primary">Login As Administrator</a>
+        </div>
     </div>
 </div>
 

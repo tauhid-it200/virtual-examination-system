@@ -31,7 +31,7 @@
         <!--JQuery-->
         <script type="text/javascript" src="{{asset("/admin/vendor/jquery/jquery.min.js")}}"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script type="text/javascript" src="{{asset("/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+        <script type="text/javascript" src="/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
         <!--Moment JS-->
         <script type="text/javascript" src="{{asset("/admin/daterangepicker/js/moment.min.js")}}"></script>
         <!--DatePicker JavaScript-->
