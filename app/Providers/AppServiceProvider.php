@@ -13,10 +13,7 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-//        $this->app['request']->server->set('HTTPS', $this->app->environment() != 'local');
-        if (env('APP_ENV') === 'production') {
             URL::forceSchema('https');
-        }
     }
 
     /**
