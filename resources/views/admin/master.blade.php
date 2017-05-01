@@ -12,7 +12,7 @@
         <title>Virtual Examination System</title>
 
         <!-- Bootstrap Core CSS -->
-        <link type="text/css" href="{{asset("/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+        <link type="text/css" href="/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!--DatePicker-->
         <link type="text/css" href="{{asset("/admin/datepicker/css/bootstrap-datepicker.min.css")}}" rel="stylesheet">
         <!--DateTimePicker-->
