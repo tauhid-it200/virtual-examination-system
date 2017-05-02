@@ -6,3 +6,4 @@ storage/*.key
 .idea
 Homestead.json
 Homestead.yaml
+.env
