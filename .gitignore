@@ -1,7 +1,8 @@
-/vendor/
+vendor/
 node_modules/
-/public/storage
-/storage/*.key
-/.idea
+nbproject/
+public/storage
+storage/*.key
+.idea
 Homestead.json
 Homestead.yaml
