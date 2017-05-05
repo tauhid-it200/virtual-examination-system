@@ -11,7 +11,7 @@
         <title>Virtual Examination System</title>
 
         <!-- Styles -->
-        <link href="{{asset("admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+        <link href="{{asset("public/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
         <!--<link href="/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 
         <!-- Scripts -->
@@ -28,7 +28,7 @@ echo json_encode([
         <nav class="navbar navbar-default navbar-static-top center-block" style="height: 100px; background-color: #330000;">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url('/login') }}">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <h3 style="color: wheat;">Virtual Examination System</h3>
                     </a>
                 </div>

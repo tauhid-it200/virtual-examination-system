@@ -12,7 +12,7 @@
         <title>Virtual Examination System</title>
 
         <!-- Bootstrap Core CSS -->
-        <link type="text/css" href="/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link type="text/css" href="{{asset("public/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
         <!--DatePicker-->
         <link type="text/css" href="{{asset("/admin/datepicker/css/bootstrap-datepicker.min.css")}}" rel="stylesheet">
         <!--DateTimePicker-->
@@ -24,14 +24,14 @@
         <!-- DataTables Responsive CSS -->
         <link type="text/css" href="{{asset("/admin/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet">
         <!-- Custom CSS -->
-        <link type="text/css" href="{{asset("/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("public/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
         <!-- Custom Fonts -->
         <link type="text/css" href="{{asset("/admin/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet">
 
         <!--JQuery-->
-        <script type="text/javascript" src="{{asset("/admin/vendor/jquery/jquery.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/admin/vendor/jquery/jquery.min.js")}}"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script type="text/javascript" src="/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
         <!--Moment JS-->
         <script type="text/javascript" src="{{asset("/admin/daterangepicker/js/moment.min.js")}}"></script>
         <!--DatePicker JavaScript-->
@@ -47,7 +47,7 @@
         <!--DataTables-Responsive JavaScript-->
         <script type="text/javascript" src="{{asset("/admin/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
         <!-- Custom Theme JavaScript -->
-        <script type="text/javascript" src="{{asset("/admin/dist/js/sb-admin-2.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/admin/dist/js/sb-admin-2.js")}}"></script>
 
         <script>
             function confirmDelete(){
