@@ -1,10 +1,17 @@
 <?php
 
-$url = parse_url(getenv("DATABASE_URL"));
-$host = $url["host"];
-$user = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+$host = '127.0.0.1';
+$database = 'forge';
+$user = 'forge';
+$password = '';
+$url = parse_url(getenv('DATABASE_URL'));
+$env = getenv('APP_ENV');
+if($env != 'local'){
+$host = $url['host'];
+$user = $url['user'];
+$password = $url['pass'];
+$database = substr($url['path'], 1);
+}
 
 return [
 
