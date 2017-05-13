@@ -15,8 +15,8 @@
             </li>
             <li class="divider"></li>
             <li>
-                <a href="{{ url('/admin-logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                <form id="logout-form" action="{{ url('/admin-logout') }}" method="POST" style="display: none;">
+                <a href="{{ url('/user-logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <form id="logout-form" action="{{ url('/user-logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
             </li>

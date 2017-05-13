@@ -1,7 +1,7 @@
 vendor/
 node_modules/
 nbproject/
-public/storage
+public/storage/
 storage/*.key
 .idea
 Homestead.json

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Auth;
 
-class HomeController extends Controller
+class LogoutController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -21,8 +23,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('user.home.home');
+    
+    public function userLogout(Request $request) {
+        Auth::guard()->logout();
+        $request->session()->forget('');
+
+        return redirect('/login');
     }
 }

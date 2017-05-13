@@ -4,7 +4,19 @@ Route::get("/", "WelcomeController@index");
 
 Auth::routes();
 
+//Route::prefix('admin')->group(function(){
+//    Route::get('/login', 'Auth\AdminLoginController@showLoginForm');
+//    Route::post('/login', 'Auth\AdminLoginController@login');
+//    Route::get('/', 'Auth\AdminController@index');
+//});
+
+Route::get('/admin-login', 'Auth\AdminLoginController@showAdminLoginForm');
+Route::post('/admin-login-attempt', 'Auth\AdminLoginController@adminLogin');
+Route::get('/admin', 'AdminController@index');
+Route::post('/admin-logout', 'Auth\AdminLogoutController@adminLogout');
+
 Route::get('/home', 'HomeController@index');
+Route::post('/user-logout', 'Auth\LogoutController@userLogout');
 
 Route::get('/add-subject', 'SubjectController@addSubject');
 Route::post('/save-subject', 'SubjectController@saveSubject');
