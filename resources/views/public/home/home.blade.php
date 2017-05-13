@@ -34,8 +34,16 @@ echo json_encode([
                 </div>
             </div>
         </nav>
-        
-        @yield("content")
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="text-center">Welcome</h1>
+                    <br>
+                    <h3>Please <a href="{{url("/login")}}" class="btn btn-primary">Login</a> to participate in exam</h3>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
