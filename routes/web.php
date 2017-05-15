@@ -18,7 +18,8 @@ Route::post('/admin-logout', 'Auth\AdminLogoutController@adminLogout');
 Route::get('/home', 'HomeController@index');
 Route::post('/user-logout', 'Auth\LogoutController@userLogout');
 
-//Route::get('/participate-exam/{id}', '');
+Route::get('/participate-quiz/{id}', 'QuizController@showQuiz');
+Route::post('/save-quiz', 'QuizController@saveQuiz');
 
 Route::get('/add-subject', 'SubjectController@addSubject');
 Route::post('/save-subject', 'SubjectController@saveSubject');

@@ -28,16 +28,16 @@ echo json_encode([
         <nav class="navbar navbar-default navbar-static-top center-block" style="height: 100px; background-color: #330000;">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         <h3 style="color: wheat;">Virtual Examination System</h3>
                     </a>
                 </div>
                 <br>
                 <br>
-                    <a class="btn btn-danger pull-right" href="{{ url('/user-logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    <form id="logout-form" action="{{ url('/user-logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
+                <a class="btn btn-danger pull-right" href="{{ url('/user-logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <form id="logout-form" action="{{ url('/user-logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
             </div>
         </nav>
 

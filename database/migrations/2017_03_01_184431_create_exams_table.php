@@ -17,13 +17,13 @@ class CreateExamsTable extends Migration
             $table->increments('id');
             $table->string('subject');
             $table->string('exam_title');
-            $table->string('exam_code');
+            $table->string('exam_code')->unique();
             $table->text('exam_description');
             $table->integer('total_questions');
             $table->integer('duration');
-            $table->dateTime("start_date");
-            $table->dateTime("end_date");
-            $table->tinyInteger("publication_status")->default(0);
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
+            $table->tinyInteger('publication_status')->default(0);
             $table->timestamps();
         });
     }
