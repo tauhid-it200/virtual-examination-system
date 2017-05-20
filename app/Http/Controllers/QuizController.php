@@ -17,47 +17,71 @@ class QuizController extends Controller {
         $question = Question::where("exam_id", $id)->get();
 
         return view("user.quiz.showQuiz")->with(["exam" => $exam, "question" => $question, "serialNo" => 1]);
-        ;
     }
 
-    public function saveQuiz(Request $request) {
+    public function submitQuiz(Request $request) {
 
         $quiz = new Quiz;
+        $quizID = $quiz->all()->last()->quiz_id + 1;
+        if ($quiz->count() == 0) {
+            $quizID = 1;
+        }
+//
+//            print_r($quizID);
+//        if($quiz->id == null) {
+//            $quizID = 0;
+//        }else{
+//            $quizID = $quiz->last()->pluck("id");
+//        }
 
-        for ($i = 0; $i < $request->no_of_qst; $i++) {
+        for ($i = 1; $i < $request->no_of_qst; $i++) {
 
-            $quiz->exam_id = $request->exam_id;
+            $quiz = new Quiz;
+
+            $quiz->quiz_id = $quizID;
+
+            $quiz->quiz_title = $request->quiz_title;
+
+            $quiz->quiz_code = $request->quiz_code;
 
             $quiz->participant = $request->participant;
 
-            $qstNo = "qst_no" . ($i + 1);
-            $quiz->qst_no = $request->$qstNo;
+            $quiz->qst_no = $i;
 
-            $question = 'question' . ($i + 1);
+            $question = 'question' . $i;
             $quiz->question = $request->$question;
 
-            $optionA = 'option_a' . ($i + 1);
-            $quiz->question = $request->$optionA;
+            $optionA = 'option_a' . $i;
+            $quiz->option_a = $request->$optionA;
 
-            $optionB = 'option_b' . ($i + 1);
-            $quiz->question = $request->$optionB;
+            $optionB = 'option_b' . $i;
+            $quiz->option_b = $request->$optionB;
 
-            $optionC = 'option_c' . ($i + 1);
-            $quiz->question = $request->$optionC;
+            $optionC = 'option_c' . $i;
+            $quiz->option_c = $request->$optionC;
 
-            $optionD = 'option_d' . ($i + 1);
-            $quiz->question = $request->$optionD;
+            $optionD = 'option_d' . $i;
+            $quiz->option_d = $request->$optionD;
 
-            $ans = 'ans' . ($i + 1);
+            $ans = 'ans' . $i;
             $quiz->given_ans = $request->$ans;
 
-            $correctAns = 'correct_ans' . ($i + 1);
+            $correctAns = 'correct_ans' . $i;
             $quiz->correct_ans = $request->$correctAns;
 
             $quiz->save();
-
-            return view("user.quiz.submitQuiz")->with("message", "Exam Has Been Submitted Successfully!");
         }
+
+        return redirect("/confirm-submit/".$quizID)->with("message", "Exam Has Been Submitted Successfully!");
+    }
+    
+    public function confirmSubmit($quizId) {
+        
+        return view("user.quiz.submitQuiz", ["quizId" => $quizId]);
+    }
+    
+    public function showResult($quizId) {
+        
     }
 
 }

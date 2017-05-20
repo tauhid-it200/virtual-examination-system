@@ -19,7 +19,9 @@ Route::get('/home', 'HomeController@index');
 Route::post('/user-logout', 'Auth\LogoutController@userLogout');
 
 Route::get('/participate-quiz/{id}', 'QuizController@showQuiz');
-Route::post('/save-quiz', 'QuizController@saveQuiz');
+Route::post('/submit-quiz', 'QuizController@submitQuiz');
+Route::get('/confirm-submit/{quizId}', 'QuizController@confirmSubmit');
+Route::get('/show-result/{quizId}', 'QuizController@showResult');
 
 Route::get('/add-subject', 'SubjectController@addSubject');
 Route::post('/save-subject', 'SubjectController@saveSubject');
