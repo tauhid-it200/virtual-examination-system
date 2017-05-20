@@ -82,6 +82,10 @@ class QuizController extends Controller {
     
     public function showResult($quizId) {
         
+        $quiz = Quiz::where("quiz_id", $quizId)->get();
+//        print_r($quiz);
+        
+        return view("user.quiz.viewResult", ["quiz" => $quiz]);
     }
 
 }

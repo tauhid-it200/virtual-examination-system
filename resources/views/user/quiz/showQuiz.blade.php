@@ -8,7 +8,7 @@
                 <h4 class="text-center">Exam Title: <b><?php echo $exam->exam_title; ?></b></h4>
                 <h4 class="text-center">Exam Code: <b><?php echo $exam->exam_code; ?></b></h4>
             </div>
-            <br/>
+            <div class="panel-body">
             <form class="form-horizontal" role="form" method="POST" action="{{ url("/submit-quiz") }}">
 
                 {{ csrf_field() }}
@@ -72,7 +72,7 @@
                 </div>
             </form>
 
-
+            </div>
         </div>
     </div>
 </div>
