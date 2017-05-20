@@ -19,7 +19,7 @@
                 <?php foreach ($question as $rowQuestion) { ?>
                     <div class=" form-group">
                         <div class="col-lg-2 text-right">
-                            Q. <?php echo $serialNo; ?>
+                            <b>Q. <?php echo $serialNo; ?></b>
                         </div>
                         <div class="">
                             <?php echo $rowQuestion->question; ?>
@@ -31,7 +31,7 @@
 
                         </div>
                         <div class="">
-                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_a; ?>"/> A. <?php echo $rowQuestion->option_a; ?>
+                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_a; ?>"/> <b>A) </b><?php echo $rowQuestion->option_a; ?>
                             <input type="hidden" name="<?php echo 'option_a' . $serialNo; ?>" value="<?php echo $rowQuestion->option_a; ?>"/> 
                         </div>
                     </div>
@@ -40,7 +40,7 @@
 
                         </div>
                         <div class="">
-                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_b; ?>"/> B. <?php echo $rowQuestion->option_b; ?>
+                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_b; ?>"/> <b>B) </b><?php echo $rowQuestion->option_b; ?>
                             <input type="hidden" name="<?php echo 'option_b' . $serialNo; ?>" value="<?php echo $rowQuestion->option_b; ?>"/> 
                         </div>
                     </div>
@@ -49,7 +49,7 @@
 
                         </div>
                         <div class="">
-                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_c; ?>"/> C. <?php echo $rowQuestion->option_c; ?>
+                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_c; ?>"/> <b>C) </b><?php echo $rowQuestion->option_c; ?>
                             <input type="hidden" name="<?php echo 'option_c' . $serialNo; ?>" value="<?php echo $rowQuestion->option_c; ?>"/> 
                         </div>
                     </div>
@@ -58,7 +58,7 @@
 
                         </div>
                         <div class="">
-                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_d; ?>"/> D. <?php echo $rowQuestion->option_d; ?>
+                            <input type="radio" name="<?php echo 'ans' . $serialNo; ?>" id="" value="<?php echo $rowQuestion->option_d; ?>"/> <b>D) </b><?php echo $rowQuestion->option_d; ?>
                             <input type="hidden" name="<?php echo 'option_d' . $serialNo; ?>" value="<?php echo $rowQuestion->option_d; ?>"/> 
                         </div>
                     </div>
