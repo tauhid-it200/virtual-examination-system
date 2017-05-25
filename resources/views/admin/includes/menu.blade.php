@@ -5,7 +5,7 @@
                             <a href="{{URL::to("/")}}" target="_blank" style="color: #00ccff;"><i class="fa fa-home fa-fw"></i> Home</a>
                         </li>
                         <li>
-                            <a href="{{URL::to("/home")}}" style="color: #00ccff;"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{URL::to("/dashboard")}}" style="color: #00ccff;"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#" style="color: #00ccff;"><i class="fa fa-book fa-fw"></i> Subject<span class="fa arrow"></span></a>

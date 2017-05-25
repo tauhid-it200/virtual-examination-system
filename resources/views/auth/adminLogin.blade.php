@@ -42,7 +42,7 @@ echo json_encode([
                         </div>
                         <div class="panel-body">
                             <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin-login-attempt') }}">
-                                {!!Form::open(array("url"=>"/admin-login-attempt", "role"=>"form", "method"=>"POST"))!!}
+                                {!!Form::open(array("url" => "/admin-login-attempt", "role" => "form", "method" => "POST"))!!}
                                 <fieldset>
                                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                         <label for="email" class="control-label col-md-4">E-Mail Address</label>

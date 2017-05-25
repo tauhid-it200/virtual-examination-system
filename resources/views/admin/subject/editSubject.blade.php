@@ -9,7 +9,7 @@
                 <h2 class="text-center">Edit Subjects Here</h2>
             </div>
             <div class="panel-body">
-                {!!Form::open(array("url"=>"/update-subject", "role"=>"form", "method"=>"POST", "class"=>"form-horizontal"))!!}
+                {!!Form::open(array("url" => "/update-subject", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <div class="form-group">
                     <label for="subj_name" class="control-label col-lg-4">Subject Name</label>
                     <div class="col-lg-6">

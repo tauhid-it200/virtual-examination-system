@@ -30,7 +30,7 @@
                                 <td><?php echo $rowExam->start_date; ?></td>
                                 <td><?php echo $rowExam->end_date; ?></td>
                                 <td>
-                                    <a href="{{url("/participate-quiz/".$rowExam->id)}}" class="btn btn-primary"> Participate
+                                    <a href="{{url("/participate-quiz/" . $rowExam->id)}}" class="btn btn-primary"> Participate
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </a>
                                 </td>

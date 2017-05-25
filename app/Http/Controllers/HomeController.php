@@ -25,6 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $exam = Exam::all();
-        return view('user.home.home', ['exam' => $exam, 'serialNo' => 1]);
+        
+        return view("user.home.home", ["exam" => $exam, "serialNo" => 1]);
     }
 }

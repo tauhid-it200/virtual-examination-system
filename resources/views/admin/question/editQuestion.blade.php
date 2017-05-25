@@ -9,7 +9,7 @@
                 <h2 class="text-center">Edit Question Here</h2>
             </div>
             <div class="panel-body">
-                {!!Form::open(array("url"=>"/update-question", "name"=>"edit_question", "role"=>"form", "method"=>"POST", "class"=>"form-horizontal"))!!}
+                {!!Form::open(array("url" => "/update-question", "name" => "edit_question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <fieldset>
                     <div class="form-group">
                         <label class="control-label col-lg-4">Exam Title</label>

@@ -15,7 +15,7 @@
                 <h2 class="text-center">Add Questions Here</h2>
             </div>
             <div class="panel-body">
-                {!!Form::open(array("url"=>"/save-question", "role"=>"form", "method"=>"POST", "class"=>"form-horizontal"))!!}
+                {!!Form::open(array("url" => "/save-question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <fieldset>
                     <div class="form-group">
                         <label for="option_a" class="control-label col-lg-4">Exam Title</label>

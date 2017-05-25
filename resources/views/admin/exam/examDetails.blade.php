@@ -63,20 +63,20 @@
                     <tr>
                         <th class="col-lg-4"></th>
                         <td>
-                            <a href="{{url("/edit-exam/".$exam->id)}}" class="btn btn-info">
+                            <a href="{{url("/edit-exam/" . $exam->id)}}" class="btn btn-info">
                                 <span class="glyphicon glyphicon-edit"></span> Edit
                             </a>
                             <?php if($exam->publication_status==1){?> 
-                                <a href="{{url("/unpublish-exam/".$exam->id)}}" class="btn btn-warning">
+                                <a href="{{url("/unpublish-exam/" . $exam->id)}}" class="btn btn-warning">
                                     <span class="glyphicon glyphicon-arrow-down"></span> Unpublish
                                 </a>
                                <?php }else{?>
-                                <a href="{{url("/publish-exam/".$exam->id)}}" class="btn btn-success">
+                                <a href="{{url("/publish-exam/" . $exam->id)}}" class="btn btn-success">
                                     <span class="glyphicon glyphicon-arrow-up"></span> Publish
                                 </a>
                                <?php }?>
                             
-                                <a href="{{url("/delete-exam/".$exam->id)}}" class="btn btn-danger" onclick="return confirmDelete();">
+                                <a href="{{url("/delete-exam/" . $exam->id)}}" class="btn btn-danger" onclick="return confirmDelete();">
                                     <span class="glyphicon glyphicon-trash"></span> Delete
                                 </a>
                         </td>

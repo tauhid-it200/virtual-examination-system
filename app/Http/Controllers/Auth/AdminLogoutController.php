@@ -6,15 +6,14 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 
-class AdminLogoutController extends Controller
-{
+class AdminLogoutController extends Controller {
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth:admin');
     }
 
@@ -23,11 +22,18 @@ class AdminLogoutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
     public function adminLogout(Request $request) {
-        Auth::guard()->logout();
-        $request->session()->forget('');
+
+        Auth::guard('admin')->logout();
+        
+//        if (!Auth::user()) {
+//            
+//            $request->session()->flush();
+//
+//            $request->session()->regenerate();
+//        }
 
         return redirect('/admin-login');
     }
+
 }
