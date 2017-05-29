@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-        <div class="panel panel-primary">
+        <div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="text-center">Exam Title: <b><?php echo $exam->exam_title; ?></b></h4>
                 <h4 class="text-center">Exam Code: <b><?php echo $exam->exam_code; ?></b></h4>

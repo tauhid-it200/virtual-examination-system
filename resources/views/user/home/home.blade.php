@@ -3,12 +3,12 @@
 
 <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-        <div class="panel panel-default">
+        <div class="panel panel-warning">
             <div class="panel-heading">
                 <h3 class="text-center">Available Exams</h3>
             </div>
             <div class="panel-body">
-                <table class="table table-bordered table-striped table-hover data_table" width="100%">
+                <table class="table table-bordered table-striped table-hover table-responsive data_table">
                     <thead>
                         <tr>
                             <th class="col-lg-1 text-center">Serial No.</th>
@@ -30,7 +30,7 @@
                                 <td><?php echo $rowExam->start_date; ?></td>
                                 <td><?php echo $rowExam->end_date; ?></td>
                                 <td>
-                                    <a href="{{url("/participate-quiz/".$rowExam->id)}}" class="btn btn-primary"> Participate
+                                    <a href="{{url("/participate-quiz/" . $rowExam->id)}}" class="btn btn-primary"> Participate
                                         <span class="glyphicon glyphicon-pencil"></span>
                                     </a>
                                 </td>

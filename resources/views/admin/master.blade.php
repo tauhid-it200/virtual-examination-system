@@ -25,6 +25,7 @@
         <link type="text/css" href="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet">
         <!-- Custom CSS -->
         <link type="text/css" href="{{asset("public/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
+        <link type="text/css" href="{{asset("public/css/app.css")}}" rel="stylesheet">
         <!-- Custom Fonts -->
         <link type="text/css" href="{{asset("public/admin/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet">
 
@@ -48,6 +49,7 @@
         <script type="text/javascript" src="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
         <!-- Custom Theme JavaScript -->
         <script type="text/javascript" src="{{asset("public/admin/dist/js/sb-admin-2.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
 
         <script>
             function confirmDelete(){
@@ -62,16 +64,16 @@
     </head>
 <!--330000-->
     <body>
-        <div id="wrapper" class="center-block" style="width: 90%; background-color: #330000;">
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="height: 150px; background-color: #330000; margin: 0px;">
+        <div id="wrapper" class="center-block" style="background-color: ;">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="height: 100px; background-color: #333333; margin: 0px;">
                 @include("admin.includes.header")
                 @include("admin.includes.menu")
             </nav>
 
-            <div id="page-wrapper" style="background-color: #ffffcc;">
+            <!--<div id="" style="background-color: ;">-->
                 @yield("content")
                 
-            </div>
+            <!--</div>-->
             <div style="height: 80px; background-color: #330000;">
                 @include("admin.includes.footer")
             </div>

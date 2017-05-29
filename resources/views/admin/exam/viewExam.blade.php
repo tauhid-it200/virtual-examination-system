@@ -33,15 +33,15 @@
                                 <td><?php echo $rowExam->end_date; ?></td>
                                 <td>
                                     <?php
-                                    if($rowExam->publication_status==1){
+                                    if($rowExam->publication_status==1) {
                                         echo "Published";
-                                    }else{
+                                    }else {
                                         echo "Unpublished";
                                     }
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="{{url("/exam-details/".$rowExam->id)}}" class="btn btn-info"> Details
+                                    <a href="{{url("/exam-details/" . $rowExam->id)}}" class="btn btn-info"> Details
                                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                                     </a>
                                 </td>

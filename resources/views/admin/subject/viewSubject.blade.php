@@ -27,10 +27,10 @@
                                 <td><?php echo $rowSubject->subj_code; ?></td>
                                 <td><?php echo $rowSubject->subj_description; ?></td>
                                 <td>
-                                    <a href="{{url("/edit-subject/".$rowSubject->id)}}" class="btn btn-info"> Edit
+                                    <a href="{{url("/edit-subject/" . $rowSubject->id)}}" class="btn btn-info"> Edit
                                         <span class="glyphicon glyphicon-edit"></span>
                                     </a>
-                                    <a href="{{url("/delete-subject/".$rowSubject->id)}}" class="btn btn-danger" id="btn_delete" onclick="return confirmDelete();"> Delete
+                                    <a href="{{url("/delete-subject/" . $rowSubject->id)}}" class="btn btn-danger" id="btn_delete" onclick="return confirmDelete();"> Delete
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </a>
                                 </td>

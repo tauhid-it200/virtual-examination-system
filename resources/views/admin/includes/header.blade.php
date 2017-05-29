@@ -1,12 +1,14 @@
+<div class="container">
 <div class="navbar-header">
-    <a class="navbar-brand" href="{{ url('/home') }}">
-        <h3 style="color: wheat">VIRTUAL EXAMINATION SYSTEM</h3>
+    <a class="navbar-brand" href="{{ url('/') }}">
+        <h3 style="color: #ffffff">Virtual Examination System</h3>
     </a>
 </div>
-<ul class="nav navbar-top-links navbar-right" style="margin-top: 85px;">
+</div>
+<ul class="nav navbar-top-links navbar-right" style="margin-top: ;">
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #cccc00;">
-            <i class="fa fa-user fa-fw"></i> {{ Auth::user()->name }} <i class="fa fa-caret-down"></i>
+            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
         </a>
         <ul class="dropdown-menu dropdown-user">
             <li><a href="#"><i class="fa fa-user fa-fw"></i> Profile</a>
@@ -23,3 +25,4 @@
         </ul>
     </li>
 </ul>
+<!--</div>-->

@@ -12,7 +12,7 @@ Auth::routes();
 
 Route::get('/admin-login', 'Auth\AdminLoginController@showAdminLoginForm');
 Route::post('/admin-login-attempt', 'Auth\AdminLoginController@adminLogin');
-Route::get('/admin', 'AdminController@index');
+Route::get('/dashboard', 'AdminController@index');
 Route::post('/admin-logout', 'Auth\AdminLogoutController@adminLogout');
 
 Route::get('/home', 'HomeController@index');
