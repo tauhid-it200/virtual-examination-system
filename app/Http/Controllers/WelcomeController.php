@@ -8,6 +8,6 @@ class WelcomeController extends Controller
 {
     public function index() {
         
-        return view("public.home.home");
+        return view("welcome");
     }
 }

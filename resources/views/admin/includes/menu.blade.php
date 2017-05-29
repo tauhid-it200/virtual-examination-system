@@ -1,8 +1,8 @@
-<div class="navbar-default sidebar" role="navigation" style="margin-top: 150px; background-color: #333333;">
+<!--<div class="navbar-default sidebar" role="navigation" style="margin-top: ; background-color: #333333;">-->
                 <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
+                    <ul class="nav" id="">
                         <li>
-                            <a href="{{URL::to("/")}}" target="_blank" style="color: #00ccff;"><i class="fa fa-home fa-fw"></i> Home</a>
+                            <a href="{{URL::to("/home")}}" target="_blank" style="color: #00ccff;"><i class="fa fa-home fa-fw"></i> Home</a>
                         </li>
                         <li>
                             <a href="{{URL::to("/dashboard")}}" style="color: #00ccff;"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>

@@ -11,10 +11,68 @@
         <title>Virtual Examination System</title>
 
         <!-- Styles -->
-        <link href="{{asset("public/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
-        <!--<link href="/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+        <!-- Bootstrap Core CSS -->
+        <link type="text/css" href="{{asset("public/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
+        <!--DatePicker-->
+        <link type="text/css" href="{{asset("public/admin/datepicker/css/bootstrap-datepicker.min.css")}}" rel="stylesheet">
+        <!--DateTimePicker-->
+        <link type="text/css" href="{{asset("/admin/datetimepicker/css/bootstrap-datetimepicker.min.css")}}" rel="stylesheet">
+        <!-- MetisMenu CSS -->
+        <link type="text/css" href="{{asset("public/admin/vendor/metisMenu/metisMenu.min.css")}}" rel="stylesheet">
+        <!-- DataTables CSS -->
+        <link type="text/css" href="{{asset("public/admin/vendor/datatables-plugins/dataTables.bootstrap.css")}}" rel="stylesheet">
+        <!-- DataTables Responsive CSS -->
+        <link type="text/css" href="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link type="text/css" href="{{asset("public/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
 
+        <link type="text/css" href="{{asset("public/css/app.css")}}" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link type="text/css" href="{{asset("public/admin/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet">
+
+        <!--JQuery-->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/jquery/jquery.min.js")}}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+        <!--Moment JS-->
+        <script type="text/javascript" src="{{asset("public/admin/daterangepicker/js/moment.min.js")}}"></script>
+        <!--DatePicker JavaScript-->
+        <script type="text/javascript" src="{{asset("public/admin/datepicker/js/bootstrap-datepicker.js")}}"></script>
+        <!--DateTimePicker JavaScript-->
+        <script type="text/javascript" src="{{asset("public/admin/datetimepicker/js/bootstrap-datetimepicker.min.js")}}"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/metisMenu/metisMenu.min.js")}}"></script>
+        <!--DataTables JavaScript-->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/datatables/js/jquery.dataTables.min.js")}}"></script>
+        <!--DataTables-Plugins JavaScript-->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js")}}"></script>
+        <!--DataTables-Responsive JavaScript-->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
+        <!-- Custom Theme JavaScript -->
+        <script type="text/javascript" src="{{asset("public/admin/dist/js/sb-admin-2.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
+
+        <script>
+$(document).ready(function () {
+    $('.data_table').DataTable({
+        responsive: true
+    });
+
+});
+        </script>
         <!-- Scripts -->
+        <script>
+            function confirmDelete() {
+                var check = confirm("Are You Sure To Delete This?");
+                if (check) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+
         <script>
             window.Laravel = <?php
 echo json_encode([
@@ -24,24 +82,27 @@ echo json_encode([
         </script>
     </head>
     <body>
-
-        <nav class="navbar navbar-default navbar-static-top center-block" style="height: 100px; background-color: #330000;">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="{{ url('/home') }}">
-                        <h3 style="color: wheat;">Virtual Examination System</h3>
-                    </a>
+        <div id="wrapper" class="center-block">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="height: 100px; background-color: #333333">
+                <div class="container">
+                    @include("user.includes.header")
                 </div>
-                <br>
-                <br>
-                <a class="btn btn-danger pull-right" href="{{ url('/user-logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                <form id="logout-form" action="{{ url('/user-logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form>
+            </nav>
+            <div>
+                @yield("content")
             </div>
-        </nav>
+        </div>
+        <!-- Scripts -->
+        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
 
-        @yield("content")
+        <script>
+            $(document).ready(function () {
+                $('.data_table').DataTable({
+                    responsive: true
+                });
 
+            });
+        </script>
     </body>
 </html>
