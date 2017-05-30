@@ -85,7 +85,7 @@ echo json_encode([
         <div id="wrapper" class="center-block">
             <nav class="navbar navbar-default navbar-static-top" role="navigation" style="height: 100px; background-color: #333333">
                 <div class="container">
-                    @include("user.includes.header")
+                    @include("admin.includes.header")
                 </div>
             </nav>
             <div class="row">
