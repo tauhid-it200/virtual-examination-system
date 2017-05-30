@@ -88,21 +88,25 @@ echo json_encode([
                     @include("user.includes.header")
                 </div>
             </nav>
-            <div>
-                @yield("content")
-            </div>
-        </div>
-        <!-- Scripts -->
-        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
-        <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
+            <div class="row">
+                <div class="col-lg-2">
 
-        <script>
+                </div>
+                <div class="col-lg-8">
+                    @yield("content")
+                </div>
+            </div>
+            <!-- Scripts -->
+            <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+            <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
+
+            <script>
             $(document).ready(function () {
                 $('.data_table').DataTable({
                     responsive: true
                 });
 
             });
-        </script>
+            </script>
     </body>
 </html>

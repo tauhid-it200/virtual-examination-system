@@ -5,13 +5,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
+            <h3><?php echo Session::get("mesage"); ?></h3>
             <div class="panel panel-danger">
                 <div class="panel-heading text-center" style="background-color: ">
                     <h3><b>ADMIN Login</b></h3>
                 </div>
                 <div class="panel-body">
                     <p class="text-danger text-center"><strong><?php echo Session::get("error"); ?></strong></p>
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin-login-attempt') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin-login') }}">
                         
                         {{ csrf_field() }}
 

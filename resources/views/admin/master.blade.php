@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
+
+        <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="author" content="">
 
         <title>Virtual Examination System</title>
 
+        <!-- Styles -->
         <!-- Bootstrap Core CSS -->
         <link type="text/css" href="{{asset("public/admin/vendor/bootstrap/css/bootstrap.min.css")}}" rel="stylesheet">
         <!--DatePicker-->
@@ -25,6 +25,7 @@
         <link type="text/css" href="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.css")}}" rel="stylesheet">
         <!-- Custom CSS -->
         <link type="text/css" href="{{asset("public/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
+
         <link type="text/css" href="{{asset("public/css/app.css")}}" rel="stylesheet">
         <!-- Custom Fonts -->
         <link type="text/css" href="{{asset("public/admin/vendor/font-awesome/css/font-awesome.min.css")}}" rel="stylesheet">
@@ -49,44 +50,63 @@
         <script type="text/javascript" src="{{asset("public/admin/vendor/datatables-responsive/dataTables.responsive.js")}}"></script>
         <!-- Custom Theme JavaScript -->
         <script type="text/javascript" src="{{asset("public/admin/dist/js/sb-admin-2.js")}}"></script>
+        <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
         <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
 
         <script>
-            function confirmDelete(){
-            var check=confirm("Are You Sure To Delete This?");
-            if(check){
-                return true;
-            }else{
-                return false;
+$(document).ready(function () {
+    $('.data_table').DataTable({
+        responsive: true
+    });
+
+});
+        </script>
+        <!-- Scripts -->
+        <script>
+            function confirmDelete() {
+                var check = confirm("Are You Sure To Delete This?");
+                if (check) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
-        }
+        </script>
+
+        <script>
+            window.Laravel = <?php
+echo json_encode([
+    'csrfToken' => csrf_token(),
+]);
+?>
         </script>
     </head>
-<!--330000-->
     <body>
-        <div id="wrapper" class="center-block" style="background-color: ;">
-            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="height: 100px; background-color: #333333; margin: 0px;">
-                @include("admin.includes.header")
-                @include("admin.includes.menu")
+        <div id="wrapper" class="center-block">
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="height: 100px; background-color: #333333">
+                <div class="container">
+                    @include("user.includes.header")
+                </div>
             </nav>
+            <div class="row">
+                <div class="col-lg-2">
 
-            <!--<div id="" style="background-color: ;">-->
-                @yield("content")
-                
-            <!--</div>-->
-            <div style="height: 80px; background-color: #330000;">
-                @include("admin.includes.footer")
+                </div>
+                <div class="col-lg-8">
+                    @yield("content")
+                </div>
             </div>
+            <!-- Scripts -->
+            <script type="text/javascript" src="{{asset("public/admin/vendor/bootstrap/js/bootstrap.min.js")}}"></script>
+            <script type="text/javascript" src="{{asset("public/js/app.js")}}"></script>
 
-        </div>
-        
-        <script>
-            $(document).ready(function(){
+            <script>
+            $(document).ready(function () {
                 $('.data_table').DataTable({
-                responsive: true
+                    responsive: true
                 });
-                
+
             });
-        </script>
+            </script>
     </body>
 </html>
