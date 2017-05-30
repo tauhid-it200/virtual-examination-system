@@ -11,7 +11,11 @@ Auth::routes();
 //});
 
 Route::get('/admin-login', 'Auth\AdminLoginController@showAdminLoginForm');
-Route::post('/admin-login-attempt', 'Auth\AdminLoginController@adminLogin');
+Route::post('/admin-login', 'Auth\AdminLoginController@adminLogin');
+
+Route::get('/admin-register', 'Auth\AdminRegisterController@showAdminRegistrationForm');
+Route::post('/admin-register', 'Auth\AdminRegisterController@adminRegister');
+
 Route::get('/dashboard', 'AdminController@index');
 Route::post('/admin-logout', 'Auth\AdminLogoutController@adminLogout');
 

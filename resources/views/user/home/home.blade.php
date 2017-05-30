@@ -1,8 +1,7 @@
 @extends("user.master")
 @section("content")
 
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+
         <div class="panel panel-warning">
             <div class="panel-heading">
                 <h3 class="text-center">Available Exams</h3>
@@ -41,7 +40,5 @@
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
 @endsection
