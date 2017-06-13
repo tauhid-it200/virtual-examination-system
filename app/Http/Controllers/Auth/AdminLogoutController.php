@@ -14,7 +14,8 @@ class AdminLogoutController extends Controller {
      * @return void
      */
     public function __construct() {
-        $this->middleware('auth:admin');
+        
+        $this->middleware("auth:admin");
     }
 
     /**
@@ -24,16 +25,9 @@ class AdminLogoutController extends Controller {
      */
     public function adminLogout(Request $request) {
 
-        Auth::guard('admin')->logout();
-        
-//        if (!Auth::user()) {
-//            
-//            $request->session()->flush();
-//
-//            $request->session()->regenerate();
-//        }
+        Auth::guard("admin")->logout();
 
-        return redirect('/admin-login');
+        return redirect("/admin-login");
     }
 
 }

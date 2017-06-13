@@ -2,7 +2,7 @@
 @section("content")
 
 <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-offset-1 col-lg-10">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h4 class="text-center">Exam Title: <b><?php echo $exam->exam_title; ?></b></h4>
@@ -15,7 +15,7 @@
 
                 <input type="hidden" name="quiz_title" value="<?php echo $exam->exam_title; ?>"/>
                 <input type="hidden" name="quiz_code" value="<?php echo $exam->exam_code; ?>"/>
-                <input type="hidden" name="participant" value="{{ Auth::user()->email }}"/>
+                <input type="hidden" name="participant" value="{{ Auth::user()->id }}"/>
                 <?php foreach ($question as $rowQuestion) { ?>
                     <div class=" form-group">
                         <div class="col-lg-2 text-right">

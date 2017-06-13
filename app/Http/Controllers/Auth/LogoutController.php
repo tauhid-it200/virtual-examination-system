@@ -13,9 +13,9 @@ class LogoutController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
+    public function __construct() {
+        
+        $this->middleware("auth");
     }
 
     /**
@@ -27,14 +27,7 @@ class LogoutController extends Controller
     public function userLogout(Request $request) {
         
         Auth::guard()->logout();
-        
-//        if (!Auth::user()) {
-//            
-//            $request->session()->flush();
-//
-//            $request->session()->regenerate();
-//        }
 
-        return redirect('/login');
+        return redirect("/login");
     }
 }

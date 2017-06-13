@@ -2,7 +2,7 @@
 @section("content")
 
 <div class="row">
-    <div class="col-lg-offset-3 col-lg-6">
+    <div class="col-lg-12">
         <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="">
             <div class="text-center" style="margin: 150px;">

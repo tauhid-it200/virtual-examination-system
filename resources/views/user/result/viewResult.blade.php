@@ -2,7 +2,7 @@
 @section("content")
 
 <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-offset-1 col-lg-10">
         <div class="panel panel-success">
             <div class="panel-heading">
                 <h4 class="text-center">Exam Title: <b><?php echo $quiz[0]->quiz_title; ?></b></h4>

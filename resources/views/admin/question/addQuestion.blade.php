@@ -2,10 +2,10 @@
 @section("content")
 <!--000033-->
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-offset-1 col-lg-10">
         <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color: #003333;">
+            <div class="panel-heading">
                 <a href="{{url("/view-question/".$exam->id)}}" class="btn btn-success pull-right" style="margin-right: 4px;">
                     <span class="glyphicon glyphicon-list-alt"></span> View Questions
                 </a>

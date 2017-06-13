@@ -6,20 +6,21 @@ use Illuminate\Http\Request;
 use App\Exam;
 use App\Question;
 use App\Quiz;
+use App\User;
 //use Illuminate\Support\Facades\Auth;
 use Auth;
 
-class QuizController extends Controller
-{
+class QuizController extends Controller {
+
     public function __construct() {
-        
+
         $this->middleware('auth');
     }
-    
+
     public function showQuiz($id) {
 
         $exam = Exam::find($id);
-        
+
         $question = Question::where("exam_id", $id)->get();
 
         return view("user.quiz.showQuiz")->with(["exam" => $exam, "question" => $question, "serialNo" => 1]);
@@ -28,12 +29,13 @@ class QuizController extends Controller
     public function submitQuiz(Request $request) {
 
         $quiz = new Quiz;
-        
-        $quizID = $quiz->all()->last()->quiz_id + 1;
-        
+
         if ($quiz->count() == 0) {
             $quizID = 1;
+        } else {
+            $quizID = $quiz->all()->last()->quiz_id + 1;
         }
+
 //
 //            print_r($quizID);
 //        if($quiz->id == null) {
@@ -78,18 +80,54 @@ class QuizController extends Controller
 
         return redirect("/confirm-submit/" . $quizID)->with("message", "Exam Has Been Submitted Successfully!");
     }
-    
+
     public function confirmSubmit($quizId) {
-        
+
         return view("user.quiz.submitQuiz", ["quizId" => $quizId]);
     }
-    
+
     public function showResult($quizId) {
-        
+
         $quiz = Quiz::where("quiz_id", $quizId)->get();
 //        print_r($quiz);
-        
-        return view("user.quiz.viewResult", ["quiz" => $quiz]);
+
+        return view("user.result.viewResult", ["quiz" => $quiz]);
+    }
+
+    public function showAllResult($userId) {
+
+//        $participant = User::find($userId)->email;
+        $result = Quiz::where("participant", $userId)->get();
+
+//    print_r($quizId);
+
+        $quizId = 0;
+        $i = 0;
+        $j = 0;
+
+        foreach ($result as $rowResult) {
+            if ($rowResult->quiz_id == $quizId) {
+                if ($rowResult->given_ans == $rowResult->correct_ans) {
+                    $i++;
+                }
+                continue;
+            }
+            else {
+                if ($rowResult->given_ans == $rowResult->correct_ans) {
+                    $i++;
+                }
+            }
+                echo $i;
+                echo "<br>";
+
+//            if($rowResult->given_ans == $rowResult->correct_ans) {
+//                    $i++;
+//                }
+
+            $quizId = $rowResult->quiz_id;
+        }
+//        echo $i;
+//        echo $j;
     }
 
 }

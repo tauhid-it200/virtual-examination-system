@@ -1,13 +1,14 @@
 @extends("user.master")
 @section("content")
 
-
-        <div class="panel panel-warning">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-success">
             <div class="panel-heading">
                 <h3 class="text-center">Available Exams</h3>
             </div>
             <div class="panel-body">
-                <table class="table table-bordered table-striped table-hover table-responsive data_table">
+                <table class="table table-bordered table-striped table-hover table-responsive data_table" width="100%">
                     <thead>
                         <tr>
                             <th class="col-lg-1 text-center">Serial No.</th>
@@ -35,10 +36,13 @@
                                 </td>
                             </tr>
                             <?php $serialNo++;
-                        } ?>
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+</div>
 
 @endsection
