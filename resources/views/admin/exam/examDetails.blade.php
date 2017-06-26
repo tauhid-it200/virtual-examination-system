@@ -3,9 +3,8 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="panel panel-red">
-            <div class="panel-heading" style="background-color: #993300;">
+            <div class="panel-heading" style="">
                 <a href="{{url("/view-question/".$exam->id)}}" class="btn btn-default pull-right" style="margin-right: 4px;">
                     <span class="glyphicon glyphicon-list-alt"></span> View Questions
                 </a>
@@ -15,6 +14,13 @@
                 <h2 class="text-center">Exam Information</h2>
             </div>
             <div class="panel-body">
+                
+                @if (session('message'))
+                <div class="alert alert-success lead">
+                    <p><b>{{ session('message') }}</b></p>
+                </div>
+                @endif
+                
                 <table class="table table-responsive" style="width: 100%;">
                     <tr>
                         <th class="col-lg-4 text-right">Subject:</th>
@@ -29,7 +35,7 @@
                         <td><?php echo $exam->exam_code; ?></td>
                     </tr>
                     <tr>
-                        <th class="col-lg-4 text-right">Exam Description:</th>
+                        <th class="col-lg-4 text-right">Description:</th>
                         <td><?php echo $exam->exam_description; ?></td>
                     </tr>
                     <tr>
@@ -63,7 +69,8 @@
                     <tr>
                         <th class="col-lg-4"></th>
                         <td>
-                            <a href="{{url("/edit-exam/" . $exam->id)}}" class="btn btn-info">
+                            <br/>
+                            <a href="{{url("/edit-exam/" . $exam->id)}}" class="btn btn-primary">
                                 <span class="glyphicon glyphicon-edit"></span> Edit
                             </a>
                             <?php if($exam->publication_status==1){?> 

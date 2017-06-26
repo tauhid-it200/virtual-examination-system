@@ -3,12 +3,18 @@
 
 <div class="row">
     <div class="col-lg-offset-1 col-lg-10">
-            <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2 class="text-center">Edit Exams Here</h2>
             </div>
             <div class="panel-body">
+                
+                @if (session('message'))
+                <div class="alert alert-success lead">
+                    <p><b>{{ session('message') }}</b></p>
+                </div>
+                @endif
+                
                 {!!Form::open(array("url" => "/update-exam", "name" => "edit_exam", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <fieldset>
                     <div class="form-group">

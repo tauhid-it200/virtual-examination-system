@@ -3,19 +3,25 @@
 
 <div class="row">
     <div class="col-lg-12">
-            <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="panel panel-green">
             <div class="panel-heading" style="background-color: #006633;">
                 <h2 class="text-center">List of All Exams</h2>
             </div>
             <div class="panel-body">
+                
+                @if (session('message'))
+                <div class="alert alert-success lead">
+                    <p><b>{{ session('message') }}</b></p>
+                </div>
+                @endif
+                
                 <table class="table table-bordered table-striped table-hover data_table" width="100%">
                     <thead>
                         <tr>
                             <th class="col-lg-1 text-center">Serial No.</th>
                             <th class="text-center">Exam Title</th>
                             <th class="text-center">Exam Code</th>
-                            <th class="col-lg-3 text-center">Exam Description</th>
+                            <th class="col-lg-3 text-center">Description</th>
                             <th class="text-center">Start Date</th>
                             <th class="text-center">End Date</th>
                             <th class="text-center">Status</th>
@@ -41,7 +47,7 @@
                                     ?>
                                 </td>
                                 <td>
-                                    <a href="{{url("/exam-details/" . $rowExam->id)}}" class="btn btn-info"> Details
+                                    <a href="{{url("/exam-details/" . $rowExam->id)}}" class="btn btn-primary"> Details
                                         <span class="glyphicon glyphicon-menu-hamburger"></span>
                                     </a>
                                 </td>

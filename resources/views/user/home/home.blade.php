@@ -3,8 +3,8 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="panel panel-success">
-            <div class="panel-heading">
+        <div class="panel panel-green">
+            <div class="panel-heading" style="background-color: #006633;">
                 <h3 class="text-center">Available Exams</h3>
             </div>
             <div class="panel-body">

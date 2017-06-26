@@ -3,18 +3,24 @@
 <!--000033-->
 <div class="row">
     <div class="col-lg-offset-1 col-lg-10">
-        <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <a href="{{url("/view-question/".$exam->id)}}" class="btn btn-success pull-right" style="margin-right: 4px;">
                     <span class="glyphicon glyphicon-list-alt"></span> View Questions
                 </a>
-                <a href="{{url("/exam-details/".$exam->id)}}" class="btn btn-default btn-outline">
+                <a href="{{url("/exam-details/".$exam->id)}}" class="btn btn-default pull-left">
                     <span class="glyphicon glyphicon-arrow-left"></span> Back to Exam Details
                 </a>
                 <h2 class="text-center">Add Questions Here</h2>
             </div>
             <div class="panel-body">
+
+                @if (session('message'))
+                <div class="alert alert-success lead">
+                    <p><b>{{ session('message') }}</b></p>
+                </div>
+                @endif
+
                 {!!Form::open(array("url" => "/save-question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <fieldset>
                     <div class="form-group">
@@ -66,8 +72,11 @@
                             </select>
                         </div>
                     </div>
+                    
+                    <br/>
+                    
                     <div class="form-group">
-                        <div class="col-lg-offset-4 col-lg-6">
+                        <div class="col-lg-offset-4 col-lg-2">
                             <input type="submit" name="button" id="button" class="btn btn-primary btn-block" value="ADD"/>
                         </div>
                     </div>
