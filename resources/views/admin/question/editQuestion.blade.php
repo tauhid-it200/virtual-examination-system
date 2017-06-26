@@ -3,12 +3,18 @@
 
 <div class="row">
     <div class="col-lg-offset-1 col-lg-10">
-            <h3 class="text-success"><?php echo Session::get("message"); ?></h3>
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2 class="text-center">Edit Question Here</h2>
             </div>
             <div class="panel-body">
+
+                @if (session('message'))
+                <div class="alert alert-success lead">
+                    <p><b>{{ session('message') }}</b></p>
+                </div>
+                @endif
+
                 {!!Form::open(array("url" => "/update-question", "name" => "edit_question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <fieldset>
                     <div class="form-group">
@@ -61,8 +67,11 @@
                             </select>
                         </div>
                     </div>
+                    
+                    <br/>
+                    
                     <div class="form-group">
-                        <div class="col-lg-offset-4 col-lg-6">
+                        <div class="col-lg-offset-4 col-lg-2">
                             <input type="submit" name="button" class="btn btn-primary btn-block" value="UPDATE"/>
                         </div>
                     </div>

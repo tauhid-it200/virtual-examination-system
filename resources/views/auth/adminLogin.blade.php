@@ -2,19 +2,24 @@
 
 @section('content')
 
-<div class="panel panel-warning">
-    <div class="panel-heading text-center" style="background-color: ">
-        <h3><b>ADMIN Login</b></h3>
+<div class="panel panel-info">
+    <div class="panel-heading text-center lead">
+        <p><b>ADMIN Login</b></p>
     </div>
     <div class="panel-body">
-        <p class="text-danger text-center"><strong><?php echo Session::get("message"); ?></strong></p>
+        @if (session('message'))
+        <div class="alert alert-danger">
+            <p><b>{{ session('message') }}</b></p>
+        </div>
+        @endif
+        <!--<p class="text-danger text-center"><strong><?php // echo Session::get("message"); ?></strong></p>-->
         <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin-login') }}">
 
             {{ csrf_field() }}
 
             <fieldset>
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label for="email" class="control-label col-md-4" style="color: black;">Email</label>
+                    <label for="email" class="control-label col-md-4" style="color: black;">EMAIL</label>
                     <div class="col-md-7">
                         <input type="email" class="form-control" id="email" name="email" autofocus="" required=""/>
                         admin@virtualapp.com
@@ -28,7 +33,7 @@
                 </div>
 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                    <label for="password" class="control-label col-md-4" style="color: black;">Password</label>
+                    <label for="password" class="control-label col-md-4" style="color: black;">PASSWORD</label>
                     <div class="col-md-7">
                         <input class="form-control" id="password" name="password" type="password" required=""/>
                         12341234
