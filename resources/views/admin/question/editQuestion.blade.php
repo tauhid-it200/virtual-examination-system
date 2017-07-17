@@ -67,12 +67,12 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <br/>
-                    
+
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <input type="submit" name="button" class="btn btn-primary btn-block" value="UPDATE"/>
+                            <input type="submit" name="button" class="btn btn-primary btn-block" value="UPDATE" onclick="assignValue();"/>
                         </div>
                     </div>
                 </fieldset>
@@ -99,21 +99,23 @@ switch ($question->correct_answer) {
         break;
 }
 ?>";
-    
-    var optionA=document.getElementById("option_a");
-    var optionB=document.getElementById("option_b");
-    var optionC=document.getElementById("option_c");
-    var optionD=document.getElementById("option_d");
-    
-    var selectOptionA=document.getElementById("select_option_a");
-    var selectOptionB=document.getElementById("select_option_b");
-    var selectOptionC=document.getElementById("select_option_c");
-    var selectOptionD=document.getElementById("select_option_d");
-    
-    selectOptionA.value=optionA.value;
-    selectOptionB.value=optionB.value;
-    selectOptionC.value=optionC.value;
-    selectOptionD.value=optionD.value;
+
+    function assignValue() {
+        var optionA = document.getElementById("option_a");
+        var optionB = document.getElementById("option_b");
+        var optionC = document.getElementById("option_c");
+        var optionD = document.getElementById("option_d");
+
+        var selectOptionA = document.getElementById("select_option_a");
+        var selectOptionB = document.getElementById("select_option_b");
+        var selectOptionC = document.getElementById("select_option_c");
+        var selectOptionD = document.getElementById("select_option_d");
+
+        selectOptionA.value = optionA.value;
+        selectOptionB.value = optionB.value;
+        selectOptionC.value = optionC.value;
+        selectOptionD.value = optionD.value;
+    }
 </script>
 
 @endsection
