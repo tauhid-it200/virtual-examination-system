@@ -77,7 +77,7 @@
                     
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <input type="submit" name="button" id="button" class="btn btn-primary btn-block" value="ADD"/>
+                            <input type="submit" name="button" id="button" class="btn btn-primary btn-block" value="ADD" onclick="assignValue();"/>
                         </div>
                     </div>
                 </fieldset>
@@ -88,20 +88,24 @@
 </div>
 
 <script>
-    $(document).ready(function () {
-        $("#option_a").keyup(function () {
-            $("#select_option_a").val($(this).val());
-        });
-        $("#option_b").keyup(function () {
-            $("#select_option_b").val($(this).val());
-        });
-        $("#option_c").keyup(function () {
-            $("#select_option_c").val($(this).val());
-        });
-        $("#option_d").keyup(function () {
-            $("#select_option_d").val($(this).val());
-        });
-    });
+    
+    function assignValue() {
+        var optionA = document.getElementById("option_a");
+        var optionB = document.getElementById("option_b");
+        var optionC = document.getElementById("option_c");
+        var optionD = document.getElementById("option_d");
+
+        var selectOptionA = document.getElementById("select_option_a");
+        var selectOptionB = document.getElementById("select_option_b");
+        var selectOptionC = document.getElementById("select_option_c");
+        var selectOptionD = document.getElementById("select_option_d");
+
+        selectOptionA.value = optionA.value;
+        selectOptionB.value = optionB.value;
+        selectOptionC.value = optionC.value;
+        selectOptionD.value = optionD.value;
+    }
+    
 </script>
 
 @endsection

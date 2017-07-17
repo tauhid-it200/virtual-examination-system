@@ -28,6 +28,8 @@
         <!-- Custom CSS -->
         <link type="text/css" href="{{asset("public/admin/dist/css/sb-admin-2.css")}}" rel="stylesheet">
         <link type="text/css" href="{{asset("public/css/app.css")}}" rel="stylesheet">
+        
+        <!--<script type="text/javascript" src="{{asset("public/admin/vendor/jquery/jquery.min.js")}}"></script>-->
 
         <script>
             window.Laravel = <?php
