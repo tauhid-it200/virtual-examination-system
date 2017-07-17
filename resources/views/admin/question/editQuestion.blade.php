@@ -15,7 +15,7 @@
                 </div>
                 @endif
 
-                {!!Form::open(array("url" => "/update-question", "name" => "edit_question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
+                {!!Form::open(array("url" => "/update-question", "name" => "update_question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
                 <fieldset>
                     <div class="form-group">
                         <label class="control-label col-lg-4">Exam Title</label>
@@ -59,7 +59,7 @@
                         <label for="correct_answer" class="control-label col-lg-4">Correct Answer</label>
                         <div class="col-lg-6">
                             <select name="correct_answer" id="correct_answer" class="form-control" required>
-                                <option>---Select Your Option---</option>
+                                <option disabled>---Select Your Option---</option>
                                 <option id="select_option_a">Option A</option>
                                 <option id="select_option_b">Option B</option>
                                 <option id="select_option_c">Option C</option>
@@ -72,7 +72,7 @@
 
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <input type="submit" name="button" class="btn btn-primary btn-block" value="UPDATE" onclick="assignValue();"/>
+                            <input type="submit" name="button" class="btn btn-primary btn-block" value="UPDATE" onclick="return validateUpdateQuestion();"/>
                         </div>
                     </div>
                 </fieldset>
@@ -83,7 +83,7 @@
 </div>
 
 <script>
-    document.forms["edit_question"].elements["correct_answer"].value = "<?php
+    document.forms["update_question"].elements["correct_answer"].value = "<?php
 switch ($question->correct_answer) {
     case $question->option_b:
         echo "Option B";
@@ -100,7 +100,33 @@ switch ($question->correct_answer) {
 }
 ?>";
 
-    function assignValue() {
+    function validateUpdateQuestion() {
+        if (document.update_question.question.value === "") {
+                alert("Please type a Question!");
+                document.update_question.question.focus();
+                return false;
+            }
+        if (document.update_question.option_a.value === "") {
+                alert("Please provide Option A!");
+                document.update_question.option_a.focus();
+                return false;
+            }
+        if (document.update_question.option_b.value === "") {
+                alert("Please provide Option B!");
+                document.update_question.option_b.focus();
+                return false;
+            }
+        if (document.update_question.option_c.value === "") {
+                alert("Please provide Option C!");
+                document.update_question.option_c.focus();
+                return false;
+            }
+        if (document.update_question.option_d.value === "") {
+                alert("Please provide Option D!");
+                document.update_question.option_d.focus();
+                return false;
+            }
+        
         var optionA = document.getElementById("option_a");
         var optionB = document.getElementById("option_b");
         var optionC = document.getElementById("option_c");
@@ -116,6 +142,7 @@ switch ($question->correct_answer) {
         selectOptionC.value = optionC.value;
         selectOptionD.value = optionD.value;
     }
+    
 </script>
 
 @endsection

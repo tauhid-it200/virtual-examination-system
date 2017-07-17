@@ -21,7 +21,7 @@
                 </div>
                 @endif
 
-                {!!Form::open(array("url" => "/save-question", "role" => "form", "method" => "POST", "class" => "form-horizontal"))!!}
+                {!!Form::open(array("url" => "/save-question", "role" => "form", "method" => "POST", "class" => "form-horizontal", "name" => "add_question"))!!}
                 <fieldset>
                     <div class="form-group">
                         <label for="option_a" class="control-label col-lg-4">Exam Title</label>
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label for="question" class="control-label col-lg-4">Question</label>
                         <div class="col-lg-6">
-                            <textarea rows="6" name="question" id="question" class="form-control" required></textarea>
+                            <textarea rows="6" name="question" id="question" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -64,7 +64,7 @@
                         <label for="correct_answer" class="control-label col-lg-4">Correct Answer</label>
                         <div class="col-lg-6">
                             <select name="correct_answer" id="correct_answer" class="form-control" required>
-                                <option>---Select Your Option---</option>
+                                <option selected disabled value="">---Select Your Option---</option>
                                 <option id="select_option_a">Option A</option>
                                 <option id="select_option_b">Option B</option>
                                 <option id="select_option_c">Option C</option>
@@ -77,7 +77,7 @@
                     
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <input type="submit" name="button" id="button" class="btn btn-primary btn-block" value="ADD" onclick="assignValue();"/>
+                            <input type="submit" name="button" id="button" class="btn btn-primary btn-block" value="ADD" onclick="return validateAddQuestion();"/>
                         </div>
                     </div>
                 </fieldset>
@@ -89,7 +89,38 @@
 
 <script>
     
-    function assignValue() {
+    function validateAddQuestion() {
+        if (document.add_question.question.value === "") {
+                alert("Please type a Question!");
+                document.add_question.question.focus();
+                return false;
+            }
+        if (document.add_question.option_a.value === "") {
+                alert("Please provide Option A!");
+                document.add_question.option_a.focus();
+                return false;
+            }
+        if (document.add_question.option_b.value === "") {
+                alert("Please provide Option B!");
+                document.add_question.option_b.focus();
+                return false;
+            }
+        if (document.add_question.option_c.value === "") {
+                alert("Please provide Option C!");
+                document.add_question.option_c.focus();
+                return false;
+            }
+        if (document.add_question.option_d.value === "") {
+                alert("Please provide Option D!");
+                document.add_question.option_d.focus();
+                return false;
+            }
+        if (document.add_question.correct_answer.value === "") {
+                alert("Please select a Correct Answer!");
+                document.add_question.correct_answer.focus();
+                return false;
+            }
+        
         var optionA = document.getElementById("option_a");
         var optionB = document.getElementById("option_b");
         var optionC = document.getElementById("option_c");
