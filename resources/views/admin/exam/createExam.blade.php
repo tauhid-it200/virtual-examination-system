@@ -76,7 +76,7 @@
                         <div class="col-lg-3">
                             <div>Start Date</div>
                             <div class='input-group date' id='start_date'>
-                                <input type='text' class="form-control datepicker" name="start_date" placeholder="YYYY-MM-DD" required/>
+                                <input type='text' class="form-control" name="start_date" placeholder="YYYY-MM-DD" required/>
                                 <span class="input-group-addon">
                                     <a><span class="glyphicon glyphicon-calendar"></span></a>
                                 </span>
