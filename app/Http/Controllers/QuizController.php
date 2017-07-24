@@ -7,7 +7,6 @@ use App\Exam;
 use App\Question;
 use App\Quiz;
 use App\User;
-//use Illuminate\Support\Facades\Auth;
 use Auth;
 
 class QuizController extends Controller {
@@ -89,45 +88,43 @@ class QuizController extends Controller {
     public function showResult($quizId) {
 
         $quiz = Quiz::where("quiz_id", $quizId)->get();
-//        print_r($quiz);
 
-        return view("user.result.viewResult", ["quiz" => $quiz]);
+        $noOfQuestion = 0;
+        $answered = 0;
+        $marks = 0;
+
+        foreach ($quiz as $rowQuiz) {
+            if ($rowQuiz->given_ans != "") {
+                if ($rowQuiz->given_ans == $rowQuiz->correct_ans) {
+                    $marks++;
+                }
+                $answered++;
+            }
+            $noOfQuestion++;
+        }
+
+        return view("user.result.viewResult", [
+            "quiz" => $quiz,
+            "noOfQuestion" => $noOfQuestion,
+            "answered" => $answered,
+            "marks" => $marks
+        ]);
     }
 
     public function showAllResult($userId) {
 
-//        $participant = User::find($userId)->email;
-        $result = Quiz::where("participant", $userId)->get();
+        $quiz = Quiz::where("participant", $userId)->get();
 
-//    print_r($quizId);
-
-        $quizId = 0;
-        $i = 0;
-        $j = 0;
-
-        foreach ($result as $rowResult) {
-            if ($rowResult->quiz_id == $quizId) {
-                if ($rowResult->given_ans == $rowResult->correct_ans) {
-                    $i++;
-                }
-                continue;
-            }
-            else {
-                if ($rowResult->given_ans == $rowResult->correct_ans) {
-                    $i++;
-                }
-            }
-                echo $i;
-                echo "<br>";
-
-//            if($rowResult->given_ans == $rowResult->correct_ans) {
-//                    $i++;
-//                }
-
-            $quizId = $rowResult->quiz_id;
-        }
-//        echo $i;
-//        echo $j;
+        return view("user.result.viewAllResult", [
+            "quiz" => $quiz,
+            "quizId" => 0,
+            "serialNo" => 1,
+            "quizTitle" => "",
+            "quizCode" => "",
+            "dateParticipated" => "",
+            "marks" => 0,
+            "noOfQuestions" => 0
+        ]);
     }
 
 }

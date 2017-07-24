@@ -17,10 +17,7 @@
             <a href="{{url('/home')}}" class=""><i class="fa fa-pencil-square-o"></i> Quiz</a>
         </li>
         <li>
-            <a href="#" class=""><i class="fa fa-calculator"></i> Result</a>
-        </li>
-        <li>
-            <a href="#" class=""><i class="fa fa-certificate"></i> Participations</a>
+            <a href="{{url('all-result/' . Auth::user()->id)}}" class=""><i class="fa fa-calculator"></i> Result</a>
         </li>
     </ul>
 </div>
