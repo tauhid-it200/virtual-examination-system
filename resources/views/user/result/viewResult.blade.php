@@ -75,7 +75,7 @@
                                 <?php if ($rowQuiz->given_ans == $rowQuiz->correct_ans) { ?>
                                     <p><b>Result: <span style="color: #009900;">Right</span></b></p>
                                 <?php } elseif ($rowQuiz->given_ans == "") { ?>
-                                    <p><b>Result: </b><b style="color: yellow;">Not Answered </b></b></p>
+                                    <p><b>Result: </b><b style="color: #cc9900;">Not Answered </b></b></p>
                                     <p><b>Correct Ans: <span style="color: #009900;"><?php echo $rowQuiz->correct_ans; ?></span></b></p>
                                 <?php } else { ?>
                                     <p><b>Result: <span style="color: red;">Wrong</span></b></p>

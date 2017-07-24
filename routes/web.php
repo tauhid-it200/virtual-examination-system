@@ -27,6 +27,7 @@ Route::post('/submit-quiz', 'QuizController@submitQuiz');
 Route::get('/confirm-submit/{quizId}', 'QuizController@confirmSubmit');
 Route::get('/show-result/{quizId}', 'QuizController@showResult');
 Route::get('/all-result/{userId}', 'QuizController@showAllResult');
+Route::get('/delete-quiz/{quizId}', 'QuizController@deleteQuiz');
 
 Route::get('/add-subject', 'SubjectController@addSubject');
 Route::post('/save-subject', 'SubjectController@saveSubject');

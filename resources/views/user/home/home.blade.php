@@ -8,7 +8,7 @@
                 <h3 class="text-center">Available Exams</h3>
             </div>
             <div class="panel-body">
-                <table class="table table-bordered table-striped table-hover table-responsive data_table" width="100%">
+                <table class="table table-bordered table-striped table-hover data_table" width="100%">
                     <thead>
                         <tr>
                             <th class="col-lg-1 text-center">Serial No.</th>

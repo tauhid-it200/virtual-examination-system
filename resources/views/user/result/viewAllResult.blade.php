@@ -8,6 +8,11 @@
                 <h3>Result Summary</h3>
             </div>
             <div class="panel-body">
+                @if (session('message'))
+                <div class="alert alert-success lead">
+                    <p><b>{{ session('message') }}</b></p>
+                </div>
+                @endif
                 <table class="table table-bordered table-striped table-hover data_table" width="100%">
                     <thead>
                         <tr>
@@ -48,6 +53,9 @@
                                             <a href="{{url("/show-result/" . $rowQuiz->quiz_id)}}" class="btn btn-primary"> Details
                                                 <span class="glyphicon glyphicon-eye-open"></span>
                                             </a>
+                                            <a href="{{url("/delete-quiz/" . $rowQuiz->quiz_id)}}" class="btn btn-danger" id="btn_delete" onclick="return confirmDelete();"> Delete
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
                                         </td>
                                     </tr>
 
@@ -59,7 +67,7 @@
                                 }
                                 ?>
                             <?php } ?>
-<?php } ?>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>

@@ -126,5 +126,16 @@ class QuizController extends Controller {
             "noOfQuestions" => 0
         ]);
     }
+    
+    public function deleteQuiz($quizId) {
+        
+        $quiz = Quiz::where("quiz_id", $quizId)->get();
+        
+        foreach($quiz as $rowQuiz) {
+            $rowQuiz->delete();
+        }
+        
+        return redirect("/all-result/" . Auth::user()->id)->with("message", "Quiz History Has Been Cleared Successfully!");
+    }
 
 }
