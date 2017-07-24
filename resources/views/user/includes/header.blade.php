@@ -5,7 +5,7 @@
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="{{ url('/') }}" style="padding-top: 15px; padding-left: 50px;">
-        <h2 class="lead" style="color: #ffffff;">Virtual Examination System</h2>
+        <p class="lead" style="color: #ffffff;">Virtual Examination System</p>
     </a>
 </div>
 <div class="collapse navbar-collapse navbar-nav" id="main_menu">
